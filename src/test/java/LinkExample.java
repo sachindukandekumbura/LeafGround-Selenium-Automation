@@ -21,6 +21,7 @@ public class LinkExample {
            WebElement homelink = driver.findElement(By.linkText("Go to Dashboard"));
            homelink.click();
            driver.navigate().back();
+
        }
 
 
