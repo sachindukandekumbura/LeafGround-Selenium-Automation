@@ -50,7 +50,9 @@ public class LinkExample {
            List<WebElement> countlayout = layout.findElements(By.tagName("a"));
            System.out.println("Count of layout links" + countlayout.size());
 
-
+           WebElement homelink1 = driver.findElement(By.linkText("Go to Dashboard"));
+           homelink1.click();
+           driver.navigate().back();
 
 
 
