@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class LinkExample {
       WebDriver driver;
       @BeforeMethod
@@ -37,6 +39,12 @@ public class LinkExample {
                System.out.println("This link is not broaeken");
            }
            driver.navigate().back();
+
+
+
+           List<WebElement> count = driver.findElements(By.tagName("a"));
+           int pagelinkcount = count.size();
+           System.out.println("Counts of full page link" + pagelinkcount );
 
 
 
