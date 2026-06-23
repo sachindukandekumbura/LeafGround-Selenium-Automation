@@ -26,6 +26,19 @@ public class LinkExample {
            String path = Without.getAttribute("href");
            System.out.println("This link is going to" + path);
 
+           WebElement broakenlink = driver.findElement(By.linkText("Broken?"));
+           broakenlink.click();
+           String title = driver.getTitle();
+           if(title.contains("404"))
+           {
+               System.out.println("This link is Broeken");
+           }else
+           {
+               System.out.println("This link is not broaeken");
+           }
+           driver.navigate().back();
+
+
 
 
 
