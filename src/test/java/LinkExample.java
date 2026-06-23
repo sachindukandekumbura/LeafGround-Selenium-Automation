@@ -22,6 +22,16 @@ public class LinkExample {
            homelink.click();
            driver.navigate().back();
 
+           WebElement Without =  driver.findElement(By.partialLinkText("Find the URL without clicking me."));
+           String path = Without.getAttribute("href");
+           System.out.println("This link is going to" + path);
+
+
+
+
+
+
+
        }
 
 
