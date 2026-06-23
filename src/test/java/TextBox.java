@@ -32,5 +32,9 @@ public class TextBox {
 
         WebElement clearText = driver.findElement(By.xpath("//*[@id='j_idt88:j_idt95']"));
         clearText.clear();
+       WebElement Retrieve = driver.findElement(By.id("j_idt88:j_idt97"));
+       String ret = Retrieve.getAttribute("value");
+        System.out.println("Retrive value is" + ret);
+
     }
 }
