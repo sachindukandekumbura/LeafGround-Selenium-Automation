@@ -1,6 +1,7 @@
 import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -20,6 +21,13 @@ public class TextBox {
     @Test
     public void Textboxexample()
     {
-        driver.findElement(By.id("j_idt88:name")).sendKeys("Sachindu Kandekumbura");
+        WebElement name = driver.findElement(By.id("j_idt88:name"));
+        name.sendKeys("Sachindu");
+
+        WebElement city =driver.findElement(By.id("j_idt88:j_idt91"));
+        city.sendKeys("Kandy");
+
+        boolean enable = driver.findElement(By.name("j_idt88:j_idt93")).isEnabled();
+        System.out.println("This value is :" + enable);
     }
 }
