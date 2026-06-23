@@ -1,5 +1,6 @@
 import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,6 +36,10 @@ public class TextBox {
        WebElement Retrieve = driver.findElement(By.id("j_idt88:j_idt97"));
        String ret = Retrieve.getAttribute("value");
         System.out.println("Retrive value is" + ret);
+
+        WebElement email = driver.findElement(By.id("j_idt88:j_idt99"));
+        email.sendKeys("sachindukandekumbura1@gmail.com" + Keys.TAB + "Confirmed to next box");
+
 
     }
 }
