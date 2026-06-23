@@ -46,6 +46,11 @@ public class LinkExample {
            int pagelinkcount = count.size();
            System.out.println("Counts of full page link" + pagelinkcount );
 
+           WebElement layout =  driver.findElement(By.className("layout-main-content"));
+           List<WebElement> countlayout = layout.findElements(By.tagName("a"));
+           System.out.println("Count of layout links" + countlayout.size());
+
+
 
 
 
