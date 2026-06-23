@@ -29,5 +29,8 @@ public class TextBox {
 
         boolean enable = driver.findElement(By.name("j_idt88:j_idt93")).isEnabled();
         System.out.println("This value is :" + enable);
+
+        WebElement clearText = driver.findElement(By.xpath("//*[@id='j_idt88:j_idt95']"));
+        clearText.clear();
     }
 }
