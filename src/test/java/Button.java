@@ -37,6 +37,12 @@ public class Button {
        System.out.println("x position is  " + x +"  " +  "Yposition is  " + y);
 
 
+       WebElement buttonColor = driver.findElement(By.id("j_idt88:j_idt96"));
+       String color = buttonColor.getCssValue("background-color");
+       System.out.println("Background color is" + color);
+
+
+
 
     }
 }
