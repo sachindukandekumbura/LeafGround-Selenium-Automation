@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,5 +29,14 @@ public class Button {
        {
            System.out.println("Title is not match");
        }
+       driver.navigate().back();
+       WebElement value=  driver.findElement(By.id("j_idt88:j_idt94"));
+       Point xypoint =value.getLocation();
+       int x =xypoint.getX();
+       int y =xypoint.getY();
+       System.out.println("x position is  " + x +"  " +  "Yposition is  " + y);
+
+
+
     }
 }
