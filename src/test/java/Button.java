@@ -41,6 +41,11 @@ public class Button {
        String color = buttonColor.getCssValue("background-color");
        System.out.println("Background color is" + color);
 
+      WebElement size = driver.findElement(By.id("j_idt88:j_idt98"));
+      int height = size.getSize().getHeight();
+      int width = size.getSize().getWidth();
+        System.out.println("heigth is this   " +" " +height + "width is this one" +" "+ width);
+
 
 
 
